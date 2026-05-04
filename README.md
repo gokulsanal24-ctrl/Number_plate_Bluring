@@ -81,6 +81,18 @@ Open browser:
 http://localhost:3000
 ```
 
+## Deploy
+
+This app needs a server because uploads are processed by Node.js and Python. GitHub Pages will not run the backend.
+
+The repository includes `Dockerfile` and `render.yaml`, so it can be deployed as a Docker web service on Render:
+
+1. Push this repository to GitHub.
+2. In Render, create a new Blueprint or Web Service from this repository.
+3. Render will build the Docker image and run `node server.js`.
+
+The app reads the hosting platform's `PORT` environment variable automatically.
+
 ## Windows Troubleshooting
 
 If `python`, `pip`, `node`, or `npm` is not recognized, the tool is either not installed or was not added to PATH.
