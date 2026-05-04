@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+model.pt
+uploads/*
+!uploads/.gitkeep
+output/*
+!output/.gitkeep
+.env
+*.log
+node-*.msi

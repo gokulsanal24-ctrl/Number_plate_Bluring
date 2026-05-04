@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Plate Blur</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="app-card" aria-label="Number plate blur tool">
+        <header class="card-header">
+          <div class="title-block">
+            <h1>Number Plate Blur</h1>
+            <p>Upload a vehicle image and receive a privacy-safe version with detected plates blurred.</p>
+          </div>
+          <span id="resultCount" class="result-count">No outputs yet</span>
+        </header>
+
+        <form id="uploadForm" class="dropzone">
+          <input id="imageInput" name="image" type="file" accept="image/*" multiple />
+          <label for="imageInput">
+            <span class="drop-title">Choose images or drop them here</span>
+            <span class="drop-copy">JPG, PNG, WEBP, or BMP. Multiple images supported.</span>
+          </label>
+          <button id="submitButton" type="submit">Blur Number Plates</button>
+        </form>
+
+        <div id="progress" class="progress" hidden>
+          <span class="progress-bar"></span>
+        </div>
+        <p id="status" class="status" role="status">Waiting for an image.</p>
+
+        <div id="previewList" class="preview-list" aria-label="Selected image previews"></div>
+        <div id="resultList" class="result-list" aria-label="Processed image results"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
